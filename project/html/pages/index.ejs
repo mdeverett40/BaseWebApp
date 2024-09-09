@@ -8,16 +8,34 @@
   <!-- Check out more components here: http://getbootstrap.com/components/ -->
   <div class="page-header">
     <%- include('../helpers/navbar') %>
-  
-    <h1>Hello World</h1>
+      <h1>Hello World - API Web App</h1>
   </div>
-
-  <p>Click on the button for a surprise.</p>
-
-  <button onClick="showPicture()" class="btn btn-dark">Click me</button>
-
-  <div id="image"></div>
   
+  <input class="search" type="text" placeholder="Enter city name">
+  <button type="button" onClick="searchWeather()"> Search</button>
+
+  <div class="error-message"></div>
+
+<div class="city">
+
+</div>
+  
+<div class="temp">
+
+</div>
+
+<button onClick="handleSignIn()">Login</button>
+
+<form onSubmit="handleMessageFormSubmit()" action="#">
+  Title:<br>
+  <input id="post-title"><br>
+  Body:<br>
+  <textarea id="post-body"></textarea><br>
+  <button>Submit</button>
+</form>
+
+<div id="post-listing"></div>
+
 </body>
 
 </html>

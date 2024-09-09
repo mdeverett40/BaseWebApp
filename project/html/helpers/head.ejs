@@ -23,5 +23,27 @@
 <!-- then bootstrap -->
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+<script>var apiKey= "<%= process.env.API_KEY %>";</script>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-database-compat.js"></script>
+
+<script>
+    var firebaseConfig = {
+      apiKey: "<%= process.env.FIREBASE_API_KEY %>",
+      authDomain: "message-stream-f68ae.firebaseapp.com",
+      databaseURL: "https://message-stream-f68ae-default-rtdb.firebaseio.com",
+      projectId: "message-stream-f68ae",
+      storageBucket: "message-stream-f68ae.appspot.com",
+      messagingSenderId: "589391673767",
+      appId: "1:589391673767:web:77e1e8d7529fb6a5425e82",
+      measurementId: "G-HSHWXGBMRZ"
+    };
+  
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+
 <!-- then our app's own js file -->
 <script src="js/main.js"></script>
